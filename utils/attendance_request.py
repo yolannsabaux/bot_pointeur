@@ -37,11 +37,8 @@ class AttendanceRequest():
 
         self.response = None
 
-    def __send(self):
-        self.response = requests.post(url=URL, json=self.data, headers=self.header)
-
     def run(self):
-        self.__send()
+        self.response = requests.post(url=URL, json=self.data, headers=self.header)
 
     def get_status(self):
         """Return the request status."""

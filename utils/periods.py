@@ -12,3 +12,4 @@ class Locations(Enum):
 
     HOME = ("Home", True)  # at_home = True
     BECODE = ("Becode", False)  # at_home = False
+    
