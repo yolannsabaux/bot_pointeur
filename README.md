@@ -16,7 +16,7 @@ Dans le fichier [`main_share.py`](https://github.com/yolannos/bot_pointeur/blob/
 
 
 ### 2) Changer paramètres Envoi de mail
-Pour pouvoir vous envoyez un mail de confirmation, il est nécessaire de changer dans le [`le fichier`]() les informations suivantes (à noter que l'on utilise un client Gmail):
+Pour pouvoir vous envoyez un mail de confirmation, il est nécessaire de changer dans le fichier [`send_email_share.py`](https://github.com/yolannos/bot_pointeur/blob/main/utils/send_email_share.py) les informations suivantes (à noter que l'on utilise un client Gmail):
 
 - `sender_email`: l'adresse avec laquelle vous souhaitez envoyer le mail de confirmation
 - `receiver_email`: l'adresse à laquelle vous voulez envoyer le mail de confirmation
