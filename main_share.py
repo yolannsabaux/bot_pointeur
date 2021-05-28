@@ -17,7 +17,7 @@ def main_func():
         attendance = Periods.EVENING
     
 
-    token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoib3duZXIiLCJ1aWQiOiI5NmMxYTk1NS1lZWVhLTQzYTctYTQ3ZC05MGM2ZGEwMjVhYzciLCJrZXkiOiI2Yzc4YTE3IiwiaWF0IjoxNjIyMTE5MDcyfQ.L7TymzHR4AY7KIVv0cG_AHw-S5IzLlNJ7H7HA5uYvok"
+    token = "" # TO BE CHANGED
     location = Locations.HOME
     
     request = AttendanceRequest(attendance, location, token)
