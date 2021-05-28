@@ -1,21 +1,7 @@
-from typing import Union
-from enum import Enum
 from dataclasses import dataclass
 import requests
-
-# Sources: https://github.com/becodeorg/graph/blob/develop/src/schema/models/attendances/types/attendance-time-period.js
-class Periods(Enum):
-
-    MORNING = "09h00"
-    LUNCH = "12h30"
-    NOON = "13h30"
-    EVENING = "17h00"
-
-
-class Locations(Enum):
-
-    HOME = ("Home", True)  # at_home = True
-    BECODE = ("Becode", False)  # at_home = False
+from utils.periods import Periods
+from utils.periods import Locations
 
 @dataclass
 class AttendanceJson:
@@ -40,9 +26,7 @@ class AttendanceJson:
             }
         }
 
-
 URL = "https://graph.becode.org/"
-
 
 class AttendanceRequest():
 
@@ -73,22 +57,3 @@ class AttendanceRequest():
                 return False
 
         return False
-
-
-
-token = "" #TO REPLACE WITH YOUR TOKEN
-location = Locations.HOME
-
-# Init and send the request
-attendance = Periods.EVENING
-request = AttendanceRequest(attendance, location, token)
-
-request.run()
-# request.join()
-
-if request.get_status():
-
-    print(f"[!] Attendance was correctly sent.")
-
-else:
-    print(f"[!] Attendance was NOT correctly sent.")
