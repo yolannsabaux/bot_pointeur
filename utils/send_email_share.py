@@ -21,10 +21,13 @@ def send_email(response):
     text = MIMEText(text, "plain")
     message.attach(text)
 
-    # Create secure connection with server and send email
-    context = ssl.create_default_context()
-    with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
-        server.login(sender_email, password)
-        server.sendmail(
-            sender_email, receiver_email, message.as_string()
-        )
+    try:
+        # Create secure connection with server and send email
+        context = ssl.create_default_context()
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
+            server.login(sender_email, password)
+            server.sendmail(
+                sender_email, receiver_email, message.as_string()
+                )
+    except:
+        print("Something went wrong while trying to send an email. Please contact your favorite dev.")
