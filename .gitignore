@@ -1,7 +1,5 @@
 #Sensitive files
-
-main.py
-send_email.py
+variables.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

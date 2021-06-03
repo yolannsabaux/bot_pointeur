@@ -2,14 +2,14 @@ import smtplib, ssl
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import datetime
-
+from utils import variables
 
 now = datetime.datetime.now()
 
 def send_email(response):
-    sender_email = "youradress@gmail.com" #to be changed
-    receiver_email = "youradress@gmail.com" #to be changed
-    password = "" #to be added
+    sender_email = variables.email_sender
+    receiver_email = variables.email_receiver
+    password = variables.password_app
 
     # message to be sent
     message = MIMEMultipart("alternative")
@@ -28,6 +28,6 @@ def send_email(response):
             server.login(sender_email, password)
             server.sendmail(
                 sender_email, receiver_email, message.as_string()
-                )
+            )
     except:
         print("Something went wrong while trying to send an email. Please contact your favorite dev.")

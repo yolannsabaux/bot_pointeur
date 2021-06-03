@@ -7,8 +7,11 @@ Ce code est uniquement du code écrit par Joffrey et arrangé par moi-même.
 
 Pour faire fonctionner ce code, différentes variables doivent être modifiées pour contenir vos informations.
 
-### 1) Changer Token Becode
-Dans le fichier [`main_share.py`](https://github.com/yolannos/bot_pointeur/blob/main/main_share.py) vous devez changer la valeur de `token` par votre token BeCode que vous pouvez vous procurer:
+### 0) Modification du fichier contenant vos variables d'identification
+Modifier le fichier `variables_template.py` dans le dossier `utils` en `variables.py`
+
+### 1) Initialiser Token Becode
+Dans le fichier [``variables.py``](https://github.com/yolannos/bot_pointeur/blob/main/utils/variables_template.py) vous devez changer la valeur de `token` par votre token BeCode que vous pouvez vous procurer:
 
 - soit en le générant à l'adresse `https://my.becode.org/profile/junior/prénom-nom/token` 
 - soit en inspectant votre navigateur (Chrome only) > application > local storage > my.becode.org > jwt-token
@@ -16,7 +19,7 @@ Dans le fichier [`main_share.py`](https://github.com/yolannos/bot_pointeur/blob/
 
 
 ### 2) Changer paramètres Envoi de mail
-Pour pouvoir vous envoyez un mail de confirmation, il est nécessaire de changer dans le fichier [`send_email_share.py`](https://github.com/yolannos/bot_pointeur/blob/main/utils/send_email_share.py) les informations suivantes (à noter que l'on utilise un client Gmail):
+Dans le fichier [``variables.py``](https://github.com/yolannos/bot_pointeur/blob/main/utils/variables_template.py) vous devez changer le:
 
 - `sender_email`: l'adresse avec laquelle vous souhaitez envoyer le mail de confirmation
 - `receiver_email`: l'adresse à laquelle vous voulez envoyer le mail de confirmation

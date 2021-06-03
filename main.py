@@ -1,9 +1,9 @@
 from utils.periods import Periods
 from utils.periods import Locations
-from utils.send_email_share import send_email
+from utils.send_email import send_email
 from utils.attendance_request import AttendanceRequest
 import datetime
-
+from utils import variables
 def main_func():
     now = datetime.datetime.now()
 
@@ -16,8 +16,8 @@ def main_func():
     else:
         attendance = Periods.EVENING
     
-
-    token = "" # TO BE CHANGED
+    
+    token = variables.token
     location = Locations.HOME
     
     request = AttendanceRequest(attendance, location, token)
